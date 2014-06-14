@@ -1,0 +1,56 @@
+#!/usr/bin/env node
+var debug = require('debug')('multiple_choice_game');
+var app = require('../app');
+
+app.set('port', process.env.PORT || 3000);
+
+var server = app.listen(app.get('port'), function() {
+  debug('Express server listening on port ' + server.address().port);
+});
+
+var rooms = {}
+
+var io = require('socket.io').listen(server);
+io.sockets.on('connection', function(socket) {
+    // socket.send(socket.id)
+    socket.on('room', function(room) {
+        socket.join(room);
+        console.log(io.sockets.manager.rooms)
+        socket.broadcast.emit("players" , io.sockets.manager.rooms)
+        socket.emit("players" , io.sockets.manager.rooms)
+        // socket.send("players" , io.sockets.manager.rooms)
+        // console.log(io.sockets.manager.rooms["/abc123"])
+    });
+
+    room = "abc123";
+
+    socket.on('message', function(data) {
+      console.log("here")
+      socket.broadcast.emit('message', data)
+    })
+
+    socket.on('answer', function(data) {
+      console.log({id: socket.id, answer: data})
+      socket.broadcast.emit('answer', {id: socket.id, answer: data})
+    })
+
+
+    socket.on('results', function(data) {
+
+      // console.log({id: socket.id, answer: data})
+      socket.broadcast.emit('results', data)
+    })
+
+    socket.on('questions', function(data) {
+      console.log("here3")
+      socket.broadcast.emit('questions', data)
+    })
+    // io.sockets.in(room).emit('message', 'what is going on, party people?');
+    
+    // this message will NOT go to the client defined above
+    io.sockets.in('foobar').emit('message', 'anyone in this room yet?');
+
+});
+
+
+    

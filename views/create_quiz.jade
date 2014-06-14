@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  div(ng-app="quizApp")
+    div(ng-controller="QuizController")
+      h2 Multiple choice quiz
+      p= keys
+      div(ng-click="startQuiz()") Click to start quiz
+      form(ng-submit="createQuiz()")
+        label Quiz Name
+        input(ng-model="new_quiz.name")
+        label Number of Questions
+        input(type="number" ng-model="new_quiz.nos_questions")
+        label Question to Ask
+        input(type="text" ng-model="new_quiz.question_text")
+        label Question Field
+        select(name="question" ng-model="new_quiz.question_key")
+          for key in keys
+            option(value="#{key}")= key
+        label Answer Field
+        select(name="answer" ng-model="new_quiz.answer_key")
+          for key in keys
+            option(value="#{key}")= key
+        input(type="submit")
+
+      div(ng-model="examplequestion") Example question
+      for key in keys 
+        div= key + " : " + JSON.stringify(example_data[key])
+        
+      
+
+
+
+
+  //- script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+  script(src='../javascripts/lib/jquery/jquery-2.0.3.min.js')
+  script(src='../javascripts/lib/angular/angular.js')
+  script(src='../javascripts/lib/angular/angular-route.js')
+  script(src='../javascripts/quiz-angular.js')       
+    

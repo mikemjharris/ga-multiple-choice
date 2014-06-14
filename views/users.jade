@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  //- for user in users
+  p= JSON.stringify(users)
+  p what year was #{users.fc} born
+  p= users.birthYear
+  //- p= users
+  p *********
+  for user_answer in user_answers
+    //- p= JSON.stringify(user_answer)
+    p= user_answer.fc
+    p= user_answer.birthYear
+  for art in artworks
+    p= JSON.stringify(art)
+    p= JSON.stringify(art.contributors)
+    p ****
+
+  //- p= user.totalWorks
+    
+  //- p "test"

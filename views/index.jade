@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  a(href="/auth/twitter") Sign in with twitter
+  br
+  a(href="/auth/facebook") Sign in with facebook
+  br
+  a(href="/quiz") Play a quiz
+  br
+  a(href="/create_quiz") Create a quiz

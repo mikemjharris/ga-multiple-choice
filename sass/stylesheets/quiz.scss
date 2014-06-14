@@ -1,0 +1,31 @@
+input , select{
+  /*-webkit-appearance: none;*/
+  /*color: red;*/
+  /*border: 5px solid black;*/
+  display: block;
+  &:after{
+     content:"\000A";
+    white-space: pre;
+  };
+}
+
+.highlighted {
+  border: 1px solid black;
+}
+
+.highlighted_correct {
+ border: 1px solid green; 
+}
+
+.answers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    cursor: pointer;
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+    border: 1px dashed gray;
+  }
+}

@@ -1,0 +1,589 @@
+Rank  Title USA Box Office
+1.  Avatar (2009) $760,505,847
+2.  Titanic (1997)  $658,672,302
+3.  Avengers Assemble (2012)  $623,279,547
+4.  The Dark Knight (2008)  $533,316,061
+5.  Star Wars: Episode I - The Phantom Menace (1999)  $474,544,677
+6.  Star Wars: Episode IV - A New Hope (1977) $460,935,665
+7.  The Dark Knight Rises (2012)  $448,130,642
+8.  Shrek 2 (2004)  $436,471,036
+9.  E.T. the Extra-Terrestrial (1982) $434,949,459
+10. The Hunger Games: Catching Fire (2013)  $424,645,577
+11. Pirates of the Caribbean: Dead Man's Chest (2006) $423,032,628
+12. The Lion King (1994)  $422,783,777
+13. Toy Story 3 (2010)  $414,984,497
+14. Iron Man Three (2013) $408,992,272
+15. The Hunger Games (2012) $407,999,255
+16. Spider-Man (2002) $403,706,375
+17. Jurassic Park (1993)  $402,348,347
+18. Transformers: Revenge of the Fallen (2009)  $402,076,689
+19. Frozen (2013/I) $400,654,227
+20. Harry Potter and the Deathly Hallows: Part 2 (2011) $380,955,619
+21. Finding Nemo (2003) $380,838,870
+22. Star Wars: Episode III - Revenge of the Sith (2005) $380,262,555
+23. The Lord of the Rings: The Return of the King (2003)  $377,019,252
+24. Spider-Man 2 (2004) $373,377,893
+25. The Passion of the Christ (2004)  $370,270,943
+26. Despicable Me 2 (2013)  $368,049,635
+27. Transformers: Dark of the Moon (2011) $352,358,779
+28. The Lord of the Rings: The Two Towers (2002)  $340,478,898
+29. Spider-Man 3 (2007) $336,530,303
+30. Alice in Wonderland (2010/I)  $334,185,206
+31. Forrest Gump (1994) $329,691,196
+32. Shrek the Third (2007)  $320,706,665
+33. Transformers (2007) $318,759,914
+34. Iron Man (2008) $318,298,180
+35. Harry Potter and the Philosopher's Stone (2001) $317,557,891
+36. Indiana Jones and the Kingdom of the Crystal Skull (2008) $317,011,114
+37. The Lord of the Rings: The Fellowship of the Ring (2001)  $313,837,577
+38. Iron Man 2 (2010) $312,057,433
+39. Star Wars: Episode II - Attack of the Clones (2002) $310,675,583
+40. Pirates of the Caribbean: At World's End (2007) $309,404,152
+41. Star Wars: Episode VI - Return of the Jedi (1983) $309,125,409
+42. Independence Day (1996) $306,124,059
+43. Pirates of the Caribbean: The Curse of the Black Pearl (2003) $305,388,685
+44. Skyfall (2012)  $304,360,277
+45. The Hobbit: An Unexpected Journey (2012)  $303,001,229
+46. Harry Potter and the Half-Blood Prince (2009) $301,956,980
+47. The Twilight Saga: Eclipse (2010) $300,523,113
+48. The Twilight Saga: New Moon (2009)  $296,623,634
+49. Harry Potter and the Deathly Hallows: Part 1 (2010) $294,980,434
+50. The Sixth Sense (1999)  $293,501,675
+51. Up (2009) $292,979,556
+52. Inception (2010)  $292,568,851
+53. The Twilight Saga: Breaking Dawn - Part 2 (2012)  $292,298,923
+54. Harry Potter and the Order of the Phoenix (2007)  $292,000,866
+55. The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005) $291,709,845
+56. Man of Steel (2013) $291,021,565
+57. Star Wars: Episode V - The Empire Strikes Back (1980) $290,158,751
+58. Harry Potter and the Goblet of Fire (2005)  $289,994,397
+59. Monsters, Inc. (2001) $289,907,418
+60. Home Alone (1990) $285,761,243
+61. The Matrix Reloaded (2003)  $281,492,479
+62. The Twilight Saga: Breaking Dawn - Part 1 (2011)  $281,275,991
+63. Meet the Fockers (2004) $279,167,575
+64. The Hangover (2009) $277,313,371
+65. Gravity (2013)  $274,084,951
+66. Monsters University (2013)  $268,488,329
+67. Shrek (2001)  $267,652,016
+68. The Amazing Spider-Man (2012) $262,030,663
+69. Harry Potter and the Chamber of Secrets (2002)  $261,970,615
+70. The Incredibles (2004)  $261,437,578
+71. How the Grinch Stole Christmas (2000) $260,031,035
+72. Jaws (1975) $260,000,000
+73. The Hobbit: The Desolation of Smaug (2013)  $258,355,354
+74. Star Trek (2009)  $257,704,099
+75. I Am Legend (2007)  $256,386,216
+76. The Blind Side (2009) $255,950,375
+77. Captain America: The Winter Soldier (2014)  $255,863,996
+78. The Lego Movie (2014) $255,855,932
+79. The Hangover Part II (2011) $254,455,986
+80. Despicable Me (2010)  $251,501,645
+81. Batman (1989) $251,188,924
+82. Night at the Museum (2006)  $250,863,268
+83. Men in Black (1997) $250,147,615
+84. Harry Potter and the Prisoner of Azkaban (2004) $249,358,727
+85. Toy Story 2 (1999)  $245,823,397
+86. Cars (2006) $244,052,771
+87. Bruce Almighty (2003) $242,589,580
+88. Raiders of the Lost Ark (1981)  $242,374,454
+89. Twister (1996)  $241,688,385
+90. My Big Fat Greek Wedding (2002) $241,437,427
+91. Pirates of the Caribbean: On Stranger Tides (2011)  $241,063,875
+92. Fast & Furious 6 (2013) $238,673,370
+93. Ghostbusters (1984) $238,632,124
+94. Shrek Forever After (2010)  $238,371,987
+95. Brave (2012)  $237,282,182
+96. Oz the Great and Powerful (2013)  $234,903,076
+97. Beverly Hills Cop (1984)  $234,760,500
+98. X-Men: The Last Stand (2006)  $234,360,014
+99. War of the Worlds (2005)  $234,277,056
+100.  Cast Away (2000)  $233,630,478
+101.  The Lost World: Jurassic Park (1997)  $229,074,524
+102.  Star Trek Into Darkness (2013)  $228,756,232
+103.  Signs (2002)  $227,965,690
+104.  Hancock (2008)  $227,946,274
+105.  The Bourne Ultimatum (2007) $227,225,045
+106.  Rush Hour 2 (2001)  $226,138,454
+107.  WALL·E (2008) $223,806,889
+108.  National Treasure: Book of Secrets (2007) $219,961,501
+109.  Alvin and the Chipmunks: The Squeakquel (2009)  $219,613,391
+110.  Mrs. Doubtfire (1993) $219,200,000
+111.  Beauty and the Beast (1991) $218,967,620
+112.  Ted (2012)  $218,628,680
+113.  King Kong (2005)  $218,051,260
+114.  Ghost (1990)  $217,631,306
+115.  The Da Vinci Code (2006)  $217,536,138
+116.  How to Train Your Dragon (2010) $217,387,997
+117.  Aladdin (1992)  $217,350,219
+118.  Alvin and the Chipmunks (2007)  $217,326,336
+119.  Madagascar 3: Europe's Most Wanted (2012) $216,366,733
+120.  Saving Private Ryan (1998)  $216,119,491
+121.  Mission: Impossible II (2000) $215,397,307
+122.  Kung Fu Panda (2008)  $215,395,021
+123.  X-Men 2 (2003)  $214,948,780
+124.  The Lorax (2012)  $213,949,505
+125.  Austin Powers in Goldmember (2002)  $213,079,163
+126.  Back to the Future (1985) $210,609,762
+127.  300 (2006)  $210,592,590
+128.  Fast & Furious 5 (2011) $209,805,005
+129.  Mission: Impossible - Ghost Protocol (2011) $209,364,921
+130.  Wedding Crashers (2005) $209,218,368
+131.  Sherlock Holmes (2009)  $209,019,489
+132.  Charlie and the Chocolate Factory (2005)  $206,456,431
+133.  Ratatouille (2007)  $206,435,493
+134.  Thor: The Dark World (2013) $206,360,018
+135.  Austin Powers: The Spy Who Shagged Me (1999)  $205,399,422
+136.  Batman Begins (2005)  $205,343,774
+137.  Terminator 2: Judgment Day (1991) $204,843,350
+138.  The Exorcist (1973) $204,565,000
+139.  World War Z (2013)  $202,351,611
+140.  The Mummy Returns (2001)  $202,007,640
+141.  Armageddon (1998) $201,573,391
+142.  Tangled (2010)  $200,807,262
+143.  Superman Returns (2006) $200,069,408
+144.  Gone with the Wind (1939) $198,655,278
+145.  Pearl Harbor (2001) $198,539,855
+146.  Monsters vs. Aliens (2009)  $198,332,128
+147.  Happy Feet (2006) $197,992,827
+148.  Indiana Jones and the Last Crusade (1989) $197,171,806
+149.  The Amazing Spider-Man 2 (2014) $196,937,194
+150.  Ice Age: Dawn of the Dinosaurs (2009) $196,573,705
+151.  Ice Age: The Meltdown (2006)  $195,329,763
+152.  X-Men: Days of Future Past (2014) $193,343,016
+153.  Madagascar (2005) $193,136,719
+154.  Toy Story (1995)  $191,796,233
+155.  Cars 2 (2011) $191,450,875
+156.  Twilight (2008/I) $191,449,475
+157.  Men in Black II (2002)  $190,418,803
+158.  Wreck-It Ralph (2012) $189,412,677
+159.  Gladiator (2000)  $187,670,866
+160.  Sherlock Holmes: A Game of Shadows (2011) $187,573,200
+161.  The Croods (2013) $187,165,546
+162.  Godzilla (2014) $186,821,483
+163.  The Day After Tomorrow (2004) $186,739,919
+164.  Mr. & Mrs. Smith (2005) $186,336,103
+165.  Snow White and the Seven Dwarfs (1937)  $184,925,485
+166.  Dances with Wolves (1990) $184,208,848
+167.  Batman Forever (1995) $184,031,112
+168.  The Fugitive (1993) $183,875,760
+169.  Ocean's Eleven (2001) $183,405,771
+170.  The Simpsons Movie (2007) $183,132,370
+171.  What Women Want (2000)  $182,805,123
+172.  The Perfect Storm (2000)  $182,618,434
+173.  Lincoln (2012)  $182,204,440
+174.  Liar Liar (1997)  $181,395,380
+175.  Grease (1978) $181,360,000
+176.  Jurassic Park III (2001)  $181,166,115
+177.  Thor (2011) $181,015,141
+178.  Mission: Impossible (1996)  $180,965,237
+179.  Planet of the Apes (2001) $180,011,740
+180.  Madagascar: Escape 2 Africa (2008)  $179,982,968
+181.  X-Men Origins: Wolverine (2009) $179,883,016
+182.  Indiana Jones and the Temple of Doom (1984) $179,870,271
+183.  Top Gun (1986)  $179,767,866
+184.  Men in Black 3 (2012) $179,020,854
+185.  Pretty Woman (1990) $178,406,268
+186.  Hitch (2005/I)  $177,575,142
+187.  Night at the Museum 2 (2009)  $177,243,721
+188.  Tootsie (1982)  $177,200,000
+189.  Rise of the Planet of the Apes (2011) $176,740,650
+190.  Captain America: The First Avenger (2011) $176,636,816
+191.  The Polar Express (2004)  $176,610,096
+192.  The Karate Kid (2010) $176,591,618
+193.  There's Something About Mary (1998) $176,483,808
+194.  Ice Age (2002)  $176,387,405
+195.  The Bourne Supremacy (2004) $176,049,130
+196.  Crocodile Dundee (1986) $174,635,000
+197.  Home Alone 2: Lost in New York (1992) $173,585,516
+198.  Elf (2003)  $173,381,405
+199.  National Treasure (2004)  $173,005,002
+200.  Rain Man (1988) $172,825,435
+201.  Air Force One (1997)  $172,620,724
+202.  Apollo 13 (1995)  $172,071,312
+203.  TRON: Legacy (2010) $172,051,787
+204.  The Matrix (1999) $171,383,253
+205.  Tarzan (1999) $171,085,177
+206.  True Grit (2010)  $171,031,347
+207.  A Beautiful Mind (2001) $170,708,996
+208.  Chicago (2002)  $170,684,505
+209.  The Help (2011) $169,705,587
+210.  Bridesmaids (2011/I)  $169,076,745
+211.  Quantum of Solace (2008)  $168,368,427
+212.  Wild Hogs (2007)  $168,213,584
+213.  3 Men and a Baby (1987) $167,780,960
+214.  Casino Royale (2006)  $167,007,184
+215.  Meet the Parents (2000) $166,225,040
+216.  2012 (2009/I) $166,112,167
+217.  Robin Hood: Prince of Thieves (1991)  $165,500,000
+218.  Kung Fu Panda 2 (2011)  $165,230,261
+219.  Hannibal (2001) $165,091,464
+220.  Catch Me If You Can (2002)  $164,435,221
+221.  The Proposal (2009/I) $163,947,053
+222.  Big Daddy (1999)  $163,479,795
+223.  The Sound of Music (1965) $163,214,286
+224.  Clash of the Titans (2010)  $163,192,114
+225.  Batman Returns (1992) $162,831,698
+226.  Django Unchained (2012) $162,804,648
+227.  A Bug's Life (1998) $162,792,677
+228.  The Pursuit of Happyness (2006) $162,586,036
+229.  Grown Ups (2010)  $162,001,186
+230.  The Waterboy (1998) $161,487,252
+231.  Ice Age: Continental Drift (2012) $161,317,423
+232.  Shark Tale (2004) $160,762,022
+233.  Die Another Day (2002)  $160,201,106
+234.  The Sting (1973)  $159,600,000
+235.  The Heat (2013/I) $159,578,352
+236.  The Firm (1993) $158,348,400
+237.  The Longest Yard (2005) $158,115,031
+238.  X-Men (2000)  $157,299,717
+239.  Scary Movie (2000)  $156,997,084
+240.  Fatal Attraction (1987) $156,645,693
+241.  What Lies Beneath (2000)  $155,370,362
+242.  The Mummy (1999)  $155,247,825
+243.  Snow White and the Huntsman (2012)  $155,111,815
+244.  Fast & Furious (2009) $155,022,220
+245.  Over the Hedge (2006) $155,019,340
+246.  Fantastic Four (2005/I) $154,695,569
+247.  Horton Hears a Who! (2008)  $154,529,187
+248.  Who Framed Roger Rabbit (1988)  $154,222,492
+249.  Beverly Hills Cop II (1987) $153,665,036
+250.  Jerry Maguire (1996)  $153,620,822
+251.  Scooby-Doo (2002) $153,288,182
+252.  101 Dalmatians (1961) $153,000,000
+253.  Sex and the City (2008) $152,637,269
+254.  Runaway Bride (1999)  $152,149,590
+255.  Rambo: First Blood Part II (1985) $150,415,432
+256.  We're the Millers (2013)  $150,368,971
+257.  Terminator 3: Rise of the Machines (2003) $150,350,192
+258.  G.I. Joe: The Rise of Cobra (2009)  $150,167,630
+259.  American Hustle (2013)  $150,117,807
+260.  Puss in Boots (2011)  $149,234,747
+261.  Divergent (2014)  $149,063,259
+262.  Les Misérables (2012) $148,775,460
+263.  Knocked Up (2007) $148,734,225
+264.  Little Fockers (2010) $148,383,780
+265.  Megamind (2010) $148,337,537
+266.  Hotel Transylvania (2012) $148,313,048
+267.  Talladega Nights: The Ballad of Ricky Bobby (2006)  $148,213,377
+268.  Gremlins (1984) $148,170,000
+269.  Gran Torino (2008)  $148,085,755
+270.  As Good as It Gets (1997) $147,637,474
+271.  Lethal Weapon 2 (1989)  $147,253,986
+272.  X-Men: First Class (2011) $146,405,371
+273.  Paul Blart: Mall Cop (2009) $146,336,178
+274.  True Lies (1994)  $146,282,411
+275.  Lilo & Stitch (2002)  $145,771,527
+276.  American Pie 2 (2001) $145,096,820
+277.  Taken (2008/I)  $145,000,989
+278.  The Santa Clause (1994) $144,833,357
+279.  The Great Gatsby (2013) $144,812,796
+280.  I, Robot (2004) $144,795,350
+281.  Lethal Weapon 3 (1992)  $144,731,527
+282.  The Fast and the Furious (2001) $144,512,310
+283.  Doctor Dolittle (1998)  $144,156,464
+284.  Mamma Mia! (2008) $143,704,210
+285.  Rio (2011)  $143,618,384
+286.  Juno (2007) $143,492,840
+287.  Marley & Me (2008)  $143,151,473
+288.  The Smurfs (2011) $142,614,158
+289.  The Jungle Book (1967)  $141,843,612
+290.  The Chronicles of Narnia: Prince Caspian (2008) $141,614,023
+291.  Animal House (1978) $141,600,000
+292.  Pocahontas (1995) $141,600,000
+293.  A Few Good Men (1992) $141,340,178
+294.  Slumdog Millionaire (2008)  $141,319,195
+295.  xXx (2002)  $141,204,016
+296.  Rush Hour (1998)  $141,153,686
+297.  Cowboys & Aliens (2011) $140,555,209
+298.  The Blair Witch Project (1999)  $140,530,114
+299.  Deep Impact (1998)  $140,459,099
+300.  Look Who's Talking (1989) $140,088,813
+301.  Rush Hour 3 (2007)  $140,080,850
+302.  Stuart Little (1999)  $140,015,224
+303.  The Rocky Horror Picture Show (1975)  $139,876,417
+304.  Taken 2 (2012)  $139,852,971
+305.  Sister Act (1992) $139,610,000
+306.  Bad Neighbours (2014/I) $139,463,200
+307.  The Matrix Revolutions (2003) $139,259,759
+308.  The Santa Clause 2 (2002) $139,225,854
+309.  The King's Speech (2010)  $138,795,342
+310.  Cheaper by the Dozen (2003) $138,614,544
+311.  21 Jump Street (2012) $138,447,667
+312.  Bad Boys II (2003)  $138,396,624
+313.  Good Will Hunting (1997)  $138,339,411
+314.  Platoon (1986)  $137,963,328
+315.  A Christmas Carol (2009)  $137,850,096
+316.  Dinosaur (2000) $137,748,063
+317.  The Conjuring (2013)  $137,387,272
+318.  Click (2006)  $137,340,146
+319.  Maleficent (2014) $136,935,682
+320.  The Green Mile (1999) $136,801,374
+321.  Ransom (1996) $136,448,821
+322.  101 Dalmatians (1996) $136,182,161
+323.  Godzilla (1998/I) $136,023,813
+324.  Argo (2012) $136,019,448
+325.  Chicken Little (2005) $135,381,507
+326.  Teenage Mutant Ninja Turtles (1990) $135,270,000
+327.  Patch Adams (1998)  $135,014,968
+328.  The Godfather (1972)  $134,821,952
+329.  Wanted (2008) $134,568,845
+330.  Die Hard 4.0 (2007) $134,520,804
+331.  The Incredible Hulk (2008)  $134,518,390
+332.  Identity Thief (2013) $134,455,175
+333.  Superman (1978) $134,218,018
+334.  Ride Along (2014) $134,141,530
+335.  The Rock (1996) $134,006,721
+336.  Anger Management (2003) $133,756,285
+337.  Grown Ups 2 (2013)  $133,668,525
+338.  Mission: Impossible III (2006)  $133,382,309
+339.  Angels & Demons (2009)  $133,375,846
+340.  Troy (2004) $133,228,348
+341.  Alvin and the Chipmunks: Chipwrecked (2011) $133,103,929
+342.  The Wolverine (2013)  $132,550,960
+343.  Bringing Down the House (2003)  $132,541,238
+344.  The Departed (2006) $132,373,442
+345.  Hulk (2003) $132,122,995
+346.  Silver Linings Playbook (2012)  $132,088,910
+347.  Minority Report (2002)  $132,014,112
+348.  Fantastic 4: Rise of the Silver Surfer (2007) $131,920,333
+349.  The Last Airbender (2010) $131,564,731
+350.  Lara Croft: Tomb Raider (2001)  $131,144,183
+351.  The Silence of the Lambs (1991) $130,727,000
+352.  Honey, I Shrunk the Kids (1989) $130,724,200
+353.  The Flintstones (1994)  $130,512,915
+354.  Get Smart (2008)  $130,313,314
+355.  American Gangster (2007)  $130,127,620
+356.  American Beauty (1999)  $130,058,047
+357.  An Officer and a Gentleman (1982) $129,795,554
+358.  Lethal Weapon 4 (1998)  $129,734,803
+359.  The Nutty Professor (1996)  $128,769,345
+360.  The Ring (2002) $128,579,698
+361.  Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006)  $128,505,958
+362.  Close Encounters of the Third Kind (1977) $128,300,000
+363.  Robots (2005) $128,200,012
+364.  Coming to America (1988)  $128,152,301
+365.  Crouching Tiger, Hidden Dragon (2000) $128,067,808
+366.  Shutter Island (2010) $127,968,405
+367.  Rocky IV (1985) $127,900,000
+368.  Enchanted (2007)  $127,706,877
+369.  The Curious Case of Benjamin Button (2008)  $127,490,802
+370.  Sweet Home Alabama (2002) $127,214,072
+371.  Dumb & Dumber (1994)  $127,175,354
+372.  2 Fast 2 Furious (2003) $127,083,765
+373.  Super 8 (2011)  $126,975,169
+374.  The World Is Not Enough (1999)  $126,930,660
+375.  My Best Friend's Wedding (1997) $126,805,112
+376.  Smokey and the Bandit (1977)  $126,737,428
+377.  Sleepless in Seattle (1993) $126,670,704
+378.  Bee Movie (2007)  $126,597,121
+379.  Anchorman 2: The Legend Continues (2013)  $126,527,201
+380.  Prometheus (2012/I) $126,464,904
+381.  Mr. Deeds (2002)  $126,203,320
+382.  Safe House (2012) $126,149,655
+383.  Rio 2 (2014)  $125,682,392
+384.  The Truman Show (1998)  $125,603,360
+385.  Erin Brockovich (2000)  $125,548,685
+386.  Ocean's Twelve (2004) $125,531,634
+387.  Tomorrow Never Dies (1997)  $125,332,007
+388.  Terminator Salvation (2009) $125,320,003
+389.  Charlie's Angels (2000) $125,305,545
+390.  Lone Survivor (2013)  $125,069,696
+391.  The Vow (2012)  $125,014,030
+392.  Life of Pi (2012) $124,976,634
+393.  Cloudy with a Chance of Meatballs (2009)  $124,870,275
+394.  The Devil Wears Prada (2006)  $124,732,962
+395.  Something's Gotta Give (2003) $124,590,960
+396.  Traffic (2000)  $124,107,476
+397.  City Slickers (1991)  $124,033,791
+398.  The Birdcage (1996) $123,986,682
+399.  Good Morning, Vietnam (1987)  $123,922,370
+400.  Nutty Professor II: The Klumps (2000) $123,307,945
+401.  Rango (2011)  $123,207,194
+402.  Rocky III (1982)  $122,823,200
+403.  G.I. Joe: Retaliation (2013)  $122,512,052
+404.  Clear and Present Danger (1994) $122,012,710
+405.  The Hunt for Red October (1990) $122,012,643
+406.  The Bodyguard (1992)  $121,945,720
+407.  Wayne's World (1992)  $121,697,350
+408.  The Bourne Identity (2002)  $121,468,960
+409.  Superbad (2007) $121,463,226
+410.  Speed (1994)  $121,248,145
+411.  50 First Dates (2004) $120,776,832
+412.  Mulan (1998)  $120,618,403
+413.  Inglourious Basterds (2009) $120,523,073
+414.  Seabiscuit (2003) $120,147,445
+415.  Four Christmases (2008) $120,136,047
+416.  Van Helsing (2004)  $120,025,245
+417.  The Mask (1994) $119,938,730
+418.  Cloudy with a Chance of Meatballs 2 (2013)  $119,793,567
+419.  I Now Pronounce You Chuck & Larry (2007)  $119,684,970
+420.  Hook (1991) $119,654,900
+421.  Walk the Line (2005)  $119,518,352
+422.  Blazing Saddles (1974)  $119,500,000
+423.  G-Force (2009)  $119,420,252
+424.  Total Recall (1990) $119,412,921
+425.  On Golden Pond (1981) $119,285,432
+426.  The Other Guys (2010) $119,219,978
+427.  Fahrenheit 9/11 (2004)  $119,078,393
+428.  Hairspray (2007)  $118,823,091
+429.  The Break-Up (2006) $118,683,135
+430.  Lemony Snicket's A Series of Unfortunate Events (2004)  $118,627,117
+431.  Back to the Future Part II (1989) $118,500,000
+432.  The Sum of All Fears (2002) $118,471,320
+433.  Salt (2010) $118,311,368
+434.  Blades of Glory (2007)  $118,153,533
+435.  Basic Instinct (1992) $117,727,224
+436.  Now You See Me (2013/I) $117,698,894
+437.  Big Momma's House (2000)  $117,559,438
+438.  Die Hard 2 (1990) $117,541,000
+439.  Horrible Bosses (2011)  $117,528,646
+440.  Rocky (1976)  $117,235,247
+441.  Jackass 3D (2010) $117,224,271
+442.  Ocean's Thirteen (2007) $117,144,465
+443.  The Wolf of Wall Street (2013)  $116,866,727
+444.  Double Jeopardy (1999)  $116,735,231
+445.  8 Mile (2002) $116,724,075
+446.  S.W.A.T. (2003) $116,643,346
+447.  The Butler (2013/I) $116,631,310
+448.  Green Lantern (2011)  $116,593,191
+449.  Notting Hill (1999) $116,006,080
+450.  The Towering Inferno (1974) $116,000,000
+451.  Ghost Rider (2007)  $115,802,596
+452.  You've Got Mail (1998)  $115,731,542
+453.  Remember the Titans (2000)  $115,648,585
+454.  District 9 (2009) $115,646,235
+455.  The Karate Kid, Part II (1986)  $115,103,979
+456.  American Graffiti (1973)  $115,000,000
+457.  Big (1988)  $114,968,774
+458.  Dodgeball: A True Underdog Story (2004) $114,324,072
+459.  The Village (2004)  $114,195,633
+460.  Bolt (2008) $114,053,579
+461.  Wild Wild West (1999) $113,745,408
+462.  Magic Mike (2012) $113,709,992
+463.  The Addams Family (1991)  $113,502,246
+464.  The Patriot (2000)  $113,330,342
+465.  The Bourne Legacy (2012)  $113,165,635
+466.  The Pacifier (2005) $113,006,880
+467.  Dr. Dolittle 2 (2001) $112,950,721
+468.  It's Complicated (2009) $112,703,470
+469.  Spy Kids (2001) $112,692,062
+470.  Ghostbusters II (1989)  $112,494,738
+471.  Face/Off (1997) $112,225,777
+472.  The Hangover Part III (2013)  $112,186,625
+473.  One Flew Over the Cuckoo's Nest (1975)  $112,000,000
+474.  Twins (1988)  $111,936,400
+475.  Spy Kids 3-D: Game Over (2003)  $111,760,631
+476.  Doctor Zhivago (1965) $111,722,000
+477.  Enemy of the State (1998) $111,544,445
+478.  The Last Samurai (2003) $111,110,575
+479.  Valentine's Day (2010/I)  $110,476,776
+480.  Tropic Thunder (2008) $110,416,702
+481.  Mr. Peabody & Sherman (2014)  $110,340,224
+482.  Fun with Dick and Jane (2005) $110,332,737
+483.  Freaky Friday (2003)  $110,222,438
+484.  The Grudge (2004) $110,175,871
+485.  Scary Movie 3 (2003)  $110,000,082
+486.  Bedtime Stories (2008)  $109,993,847
+487.  The Little Mermaid (1989) $109,859,444
+488.  Star Trek IV: The Voyage Home (1986)  $109,713,132
+489.  Crocodile Dundee II (1988)  $109,306,210
+490.  The 40 Year-Old Virgin (2005) $109,243,478
+491.  Couples Retreat (2009)  $109,176,215
+492.  A Time to Kill (1996) $108,706,165
+493.  Black Hawk Down (2001)  $108,638,745
+494.  Terms of Endearment (1983)  $108,423,489
+495.  Ace Ventura: When Nature Calls (1995) $108,360,000
+496.  The Princess Diaries (2001) $108,244,774
+497.  Superman II (1980)  $108,200,000
+498.  Hop (2011)  $108,012,170
+499.  Pulp Fiction (1994) $107,930,000
+500.  Paranormal Activity (2007)  $107,917,283
+501.  Epic (2013) $107,515,297
+502.  Watchmen (2009) $107,503,316
+503.  A League of Their Own (1992)  $107,458,785
+504.  Batman & Robin (1997) $107,285,004
+505.  Captain Phillips (2013) $107,100,855
+506.  Black Swan (2010) $106,952,327
+507.  Miss Congeniality (2000)  $106,807,667
+508.  Chicken Run (2000)  $106,793,915
+509.  Analyze This (1999) $106,694,016
+510.  GoldenEye (1995)  $106,635,996
+511.  Indecent Proposal (1993)  $106,614,100
+512.  Driving Miss Daisy (1989) $106,593,296
+513.  Love Story (1970) $106,400,000
+514.  300: Rise of an Empire (2014) $106,369,117
+515.  Kramer vs. Kramer (1979)  $106,300,000
+516.  The Italian Job (2003)  $106,126,012
+517.  Every Which Way But Loose (1978)  $105,918,400
+518.  How to Lose a Guy in 10 Days (2003) $105,807,520
+519.  Porky's (1982)  $105,500,000
+520.  The First Wives Club (1996) $105,444,419
+521.  Interview with the Vampire: The Vampire Chronicles (1994) $105,264,608
+522.  George of the Jungle (1997) $105,263,257
+523.  Robin Hood (2010) $105,219,735
+524.  Phenomenon (1996) $104,632,573
+525.  The Graduate (1967) $104,397,102
+526.  The Chronicles of Narnia: The Voyage of the Dawn Treader (2010) $104,383,624
+527.  The Princess and the Frog (2009)  $104,374,107
+528.  American Wedding (2003) $104,354,205
+529.  Daddy Day Care (2003) $104,148,781
+530.  Road to Perdition (2002)  $104,054,514
+531.  Paranormal Activity 3 (2011)  $104,007,828
+532.  Journey 2: The Mysterious Island (2012) $103,812,241
+533.  Dick Tracy (1990) $103,738,726
+534.  Rise of the Guardians (2012)  $103,400,692
+535.  Dreamgirls (2006) $103,338,338
+536.  Nine to Five (1980) $103,290,500
+537.  Just Go with It (2011)  $103,028,109
+538.  Scream (1996) $103,001,286
+539.  The Expendables (2010)  $102,981,571
+540.  Jaws 2 (1978) $102,922,376
+541.  Bambi (1942)  $102,797,150
+542.  The General's Daughter (1999) $102,678,089
+543.  The Aviator (2004)  $102,608,827
+544.  Daredevil (2003)  $102,543,518
+545.  The Girl with the Dragon Tattoo (2011)  $102,515,793
+546.  In the Line of Fire (1993)  $102,314,283
+547.  Butch Cassidy and the Sundance Kid (1969) $102,308,900
+548.  Mary Poppins (1964) $102,300,000
+549.  The Mummy: Tomb of the Dragon Emperor (2008)  $102,176,165
+550.  Jackass Presents: Bad Grandpa (2013)  $101,978,840
+551.  Pacific Rim (2013)  $101,785,482
+552.  American Pie (1999) $101,736,215
+553.  Journey to the Center of the Earth (2008) $101,702,060
+554.  Gone in Sixty Seconds (2000)  $101,643,008
+555.  Maverick (1994) $101,631,272
+556.  Sleeping with the Enemy (1991)  $101,580,000
+557.  Stir Crazy (1980) $101,500,000
+558.  This Is the End (2013)  $101,470,202
+559.  Scream 2 (1997) $101,334,374
+560.  Eraser (1996) $101,228,120
+561.  The Prince of Egypt (1998)  $101,217,900
+562.  Unforgiven (1992) $101,157,447
+563.  Eagle Eye (2008)  $101,111,837
+564.  Con Air (1997)  $101,087,161
+565.  Sleepy Hollow (1999)  $101,068,340
+566.  Noah (2014) $101,044,092
+567.  Contact (1997)  $100,853,835
+568.  The Pelican Brief (1993)  $100,768,056
+569.  Charlie's Angels: Full Throttle (2003)  $100,685,880
+570.  Vanilla Sky (2001)  $100,614,858
+571.  The Rugrats Movie (1998)  $100,491,683
+572.  Airport (1970)  $100,489,150
+573.  Step Brothers (2008)  $100,468,793
+574.  Due Date (2010) $100,448,498
+575.  Dr. Seuss' The Cat in the Hat (2003)  $100,446,895
+576.  Million Dollar Baby (2004)  $100,422,786
+577.  Casper (1995) $100,328,194
+578.  Bad Teacher (2011)  $100,292,856
+579.  Evan Almighty (2007)  $100,289,690
+580.  Shakespeare in Love (1998)  $100,241,322
+581.  Jumanji (1995)  $100,200,000
+582.  Yogi Bear (2010)  $100,169,068
+583.  Se7en (1995)  $100,125,340
+584.  The Hunchback of Notre Dame (1996)  $100,117,603
+585.  Parenthood (1989) $100,050,000
+586.  You Don't Mess with the Zohan (2008)  $100,018,837
+587.  Die Hard: With a Vengeance (1995) $100,012,500
+588.  Collateral (2004) $100,003,492
