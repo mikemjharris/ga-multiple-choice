@@ -3,20 +3,23 @@ extends layout
 block content
   div(ng-app="quizApp")
     div(ng-controller="MultiQuizController")
-      p : {{ message }}
-      p(id="quiz_id" ng-hide="true")= quiz_id 
-      div(ng-hide="question" ng-click="getNextQuestion()") Click to start
-      div(ng-show="question")
-        div Question {{question_nos}} of {{quiz_params.nos_questions}} {{ quiz_params.question_text }}
-        div >> {{ question }}
-        ul(class="answers")
-          li(ng-repeat="answer in answers" ng-click="submitAnswer($index)" ng-class="{highlighted: $index ==clicked , highlighted_correct: answer == correct} ")
-            {{ answer }}
-        
-        div(ng-click="getNextQuestion()" ng-show="question_nos < quiz_params.nos_questions && shownext") Next question
-        div(ng-hide="question_nos < quiz_params.nos_questions && shownext") Click to share with friends
-        div Your score  {{ score }} 
-
+      div(ng-hide="username")
+        label Enter a name to be used in the quiz
+        input(placeholder="Enter a username" ng-model="input_username") 
+        input(type="submit" ng-click="submitUsername()")
+      div(ng-show="username")
+        p : {{ message }}
+        p(id="quiz_id" ng-hide="true")= quiz_id 
+        div(ng-hide="question" ng-click="getNextQuestion()") Click to start
+        div(ng-show="question")
+          div {{ question }}
+          ul(class="answers")
+            li(ng-repeat="answer in answers" ng-click="submitAnswer($index)" ng-class="{highlighted: $index ==clicked , highlighted_correct: answer == correct} ")
+              {{ answer }}
+          
+          div(ng-click="getNextQuestion()" ng-show="question_nos < quiz_params.nos_questions && shownext") Next question
+          div(ng-hide="question_nos < quiz_params.nos_questions && shownext") Click to share with friends
+          div Your score  {{ score }} 
 
 
   script(src="/socket.io/socket.io.js")

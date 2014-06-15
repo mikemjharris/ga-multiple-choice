@@ -7,11 +7,11 @@ var ObjectID = require('mongoskin').ObjectID
 /* GET users listing. */
 router.get('/', function(req, res) {
   var db = req.db;
-
   db.collection('quiz_params').find().toArray(function (err, data) {
-    res.render('quiz_index' , {existing_quizes: data});  
+    res.render('quiz_index' , {existing_quizes: data, title: "Choose a Quiz", game_type: "single"});  
   });
 });
+
 
 
 
@@ -28,7 +28,7 @@ router.get('/:id', function(req, res) {
 router.get('/:id/play',function(req,res){
   // var db = req.db;
   // db.collection(database_collection).find().toArray(function (err, data) {
-   res.render('quiz_show', {quiz_id: req.params.id})
+   res.render('quiz_show', {quiz_id: req.params.id, title: "Single player play quiz"})
   // })
 })
 

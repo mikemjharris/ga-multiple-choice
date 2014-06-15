@@ -5,5 +5,8 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/quiz.css')
   body
-    a(href="/") Home
-    block content
+    nav
+      a(href="/") Home
+    h2= title
+    main
+      block content

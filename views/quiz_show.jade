@@ -7,16 +7,14 @@ block content
       div(ng-hide="question" ng-click="getNextQuestion()") Click to start
       div(ng-show="question")
         div Question {{question_nos}} of {{quiz_params.nos_questions}} {{ quiz_params.question_text }}
-        div >> {{ question }}
-        p {{message}}
-        ul
+        div {{ question }}
+        ul(class="answers")
           li(ng-repeat="answer in answers" ng-click="submitAnswer($index)" ng-class="{highlighted: $index ==clicked , highlighted_correct: $index == correct} ")
             {{ answer }}
         
-        div(ng-click="getNextQuestion()" ng-show="question_nos < quiz_params.nos_questions && shownext") Next question
-        div(ng-hide="question_nos < quiz_params.nos_questions && shownext") Click to share with friends
+        div(ng-click="getNextQuestion()" ng-show="question_nos < quiz_params.nos_questions && shownext" class="quiz_button") Next question
         div Your score  {{ score }} 
-
+        div {{message}}
 
 
 

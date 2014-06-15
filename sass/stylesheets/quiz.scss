@@ -1,21 +1,47 @@
-input , select{
-  /*-webkit-appearance: none;*/
-  /*color: red;*/
-  /*border: 5px solid black;*/
+$button-color: red;
+$input-border: black;
+
+*{
+  box-sizing: border-box;
+}
+
+
+nav {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+h2 {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid black;  
+}
+
+
+input  {
+  -webkit-appearance: none;
+  padding: 10px;
+  background: white;
+  border: 1px solid $input-border;
   display: block;
+  margin: 10px 0;
   &:after{
      content:"\000A";
     white-space: pre;
   };
 }
 
-.highlighted {
-  border: 1px solid black;
+input[type="submit"]{
+  border: none;
+  background: $button-color;
 }
 
-.highlighted_correct {
- border: 1px solid green; 
+select {
+  display: block;
 }
+
+
 
 .answers {
   margin: 0;
@@ -28,4 +54,30 @@ input , select{
     padding: 10px;
     border: 1px dashed gray;
   }
+}
+
+li.highlighted {
+  border: 2px solid black;
+}
+
+li.highlighted_correct {
+ border: 5px solid green; 
+}
+
+.quiz_button{
+  padding: 5px;
+  width: 200px;
+  border: 1px solid black;
+  margin: 5px 0;
+  cursor: pointer;
+  text-align: center;
+  &:hover {
+    background: gray;
+  }
+}
+
+.left-box, .right-box{
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
 }

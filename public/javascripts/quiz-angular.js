@@ -13,8 +13,7 @@ app.controller('QuizController', function($scope, $http) {
     $scope.shownext = false
     $scope.score = 0  
     $scope.quiz_id = $('#quiz_id').html()
-    
-    
+     
     $scope.getNextQuestion = function() {
       $scope.shownext = false
       $scope.clicked = 999
@@ -25,11 +24,11 @@ app.controller('QuizController', function($scope, $http) {
         $scope.question = data.question
         $scope.answers = data.answers
         $scope.quiz_params = data.quiz_params
-        
       })
     }
 
-    // $scope.getNextQuestion()
+    //show questions when page loads
+    $scope.getNextQuestion()
 
     $scope.submitAnswer = function(index_item) {
       $scope.clicked = index_item
@@ -40,13 +39,10 @@ app.controller('QuizController', function($scope, $http) {
           console.log($scope.correct)
           if($scope.message == "correct") {
             $scope.score += 1
-          }
-          
+          }      
           $scope.shownext = true
       })
-      console.log(index_item)
     }
-
 
     $scope.createQuiz = function() {
       $http.post("create_quiz", $scope.new_quiz).success(function(data) {
@@ -75,8 +71,6 @@ app.controller('GenerateQuizController', function($scope, $http) {
       $http.get('/list_quizes/' + $scope.show_quiz_template._id).success(function(data){
             $scope.quizes = data 
       })
-        
-
     }
 
     $scope.generateQuiz = function() {
@@ -90,6 +84,9 @@ app.controller('GenerateQuizController', function($scope, $http) {
 
 
 })
+
+
+
 
 
 
@@ -144,12 +141,17 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
     if($scope.canAnswer) {
       $scope.canAnswer = false
       $scope.clicked = index_item
+      $scope.message = "Anser submitted"
       socket.emit("answer", index_item)
     } else {
       $scope.message = "You've already submitted an answer!"
     }
   }
 
+  $scope.submitUsername = function() {
+    $scope.username = $scope.input_username
+    console.log($scope.username)
+  }
 })
 
 

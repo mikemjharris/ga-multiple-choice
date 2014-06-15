@@ -3,28 +3,43 @@ extends layout
 block content
   div(ng-app="quizApp")
     div(ng-controller="GenerateQuizController")
-      h2 Multiple choice quiz
-      
-      div Existing Quiz Templates
+      div(class="left-box")
+        div Existing Quiz Templates
+          ul
+            li(ng-repeat="quiz in existing_quizes")
+              a(href="#" ng-click="showQuizTemplate(quiz)") {{ quiz.name }}
+        div(ng-show="show_quiz_template")
+          table(class="show_quiz_template")
+            tr
+              td Quiz name
+              td {{ show_quiz_template.name }}
+            tr
+              td Number of questions
+              td {{ show_quiz_template.nos_questions }}
+            tr
+              td Question
+              td {{ show_quiz_template.question_text }}
+            tr
+              td Question Key 
+              td {{ show_quiz_template.question_key }}
+            tr
+              td Answer Key 
+              td {{ show_quiz_template.answer_key }}
+
+                  
+          div(href="#" ng-click="generateQuiz()" class="quiz_button") Generate New Questions
+        if game_type == "single"  
+          a(href="/quiz/{{ generated_quiz.id }}/play" ng-show="generated_quiz.msg" class="quiz_button") {{ generated_quiz.msg }}
+        else 
+          a(href="/multi_quiz_host/{{ generated_quiz.id }}" ng-show="generated_quiz.msg" class="quiz_button") {{ generated_quiz.msg }}
+
+      div(class="right-box") Existing quizes for this template
         ul
-          li(ng-repeat="quiz in existing_quizes")
-            a(href="#" ng-click="showQuizTemplate(quiz)") {{ quiz.name }}
-
-      div(ng-show="show_quiz_template")
-        p name {{ show_quiz_template.name }}
-        p nos questions {{ show_quiz_template.nos_questions }}
-        p question {{ show_quiz_template.question_text }}
-        p question_key {{ show_quiz_template.question_key }}
-        p answer_key {{ show_quiz_template.answer_key }}
-        a(href="#" ng-click="generateQuiz()") Generate New Questions
-        br
-        a(href="/quiz/{{ generated_quiz.id }}/play" ng-show="generated_quiz") {{ generated_quiz.msg }}
-
-      div Existing quizes for this template
-      ul
-        li(ng-repeat="quiz in quizes") 
-          a(href="/quiz/{{ quiz }}/play") Quiz {{ $index + 1}}
-
+          li(ng-repeat="quiz in quizes") 
+            if game_type == "single"
+              a(href="/quiz/{{ quiz }}/play") Quiz {{ $index + 1}}
+            else 
+              a(href="/multi_quiz_host/{{ quiz }}") Quiz {{ $index + 1}}
 
 
 

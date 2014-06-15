@@ -5,20 +5,27 @@ var ObjectID = require('mongoskin').ObjectID
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Quiz Game' });
 });
 
 router.get('/multi_quiz', function(req, res) {
-  res.render('quiz_multi_show');
+  res.render('quiz_multi_show', {title: "Quiz Player"});
 });
 
+router.get('/multi_quiz_host', function(req, res) {
+  var db = req.db;
+  db.collection('quiz_params').find().toArray(function (err, data) {
+    res.render('quiz_index' , {existing_quizes: data, title: "Choose a Quiz", game_type: "multi"});  
+  });
+});
+
+
 router.get('/multi_quiz_host/:id', function(req, res) {
-  res.render('quiz_multi_host', {quiz_id: req.params.id})
+  res.render('quiz_multi_host', {quiz_id: req.params.id, title: "Quiz "})
 });
 
 router.get('/list_quizes', function(req, res) {
   var db = req.db;
-
   db.collection('quiz_params').find().toArray(function (err, data) {
     res.json(data)
   });
@@ -83,12 +90,6 @@ router.post('/create_quiz', function(req, res) {
 });
 
 
-function generate_an_answer2(a , quiz) {
-  setTimeout(function() {
-    console.log(quiz)
-    quiz()
-    return quiz + 1}, 300)
-}
 generate_an_answer = function (quiz, db, i, callback) {
       var question_key = quiz.quiz_params.question_key 
       var answer_key = quiz.quiz_params.answer_key

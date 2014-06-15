@@ -18,7 +18,7 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
     $scope.message = {}
     $scope.stats = {}
     $scope.firstAnswer = true
-
+    $scope.gameStarted = false
 
     $http.get("/quiz/" + $scope.quiz_id + "/host_question/").success(function(data){
       $scope.question_data = data
@@ -56,58 +56,36 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
     });
 
     socket.on("players", function(data) {
-      $scope.players = data[""]
-
+      if(!$scope.gameStarted) {
+        $scope.players = data[""]
+        for(var key in $scope.players) {
+          $scope.stats[$scope.players[key]] = {score: 0 , message: "Please wait for the game to start", answer: 999 }
+        }
+        socket.emit("results" , $scope.stats)
+      }
     })
     
-    $scope.sendMessage = function () {
-      console.log("hi")
-      socket.emit('message', "test");
-      // socket.emit.to("abc123").emit('message', test);
-    }
     $scope.getNextQuestion = function() {
+      $scope.gameStarted = true
       $scope.shownext = false
       $scope.clicked = 999
       $scope.correct = 999
       $scope.question_nos += 1
       $scope.message = ""
       $scope.firstAnswer = true
-
-      
       $scope.question = $scope.question_data["question" + $scope.question_nos].question
       $scope.answers = $scope.question_data["question" + $scope.question_nos].answers
       $scope.quiz_params = $scope.question_data.quiz_params
+      
+      for(var key in $scope.players) {
+        $scope.stats[$scope.players[key]].message = "Question " + $scope.question_nos + " of "  + $scope.quiz_params.nos_questions
+      }
       socket.emit("questions" , {question: $scope.question, answers: $scope.answers, quiz_params: $scope.quiz_params, message: ""});
+      socket.emit("results" , $scope.stats)
     }
 
     $scope.sendResults = function() {
       socket.emit("results" , $scope.stats)
-
-    }
-
-    // $scope.getNextQuestion()
-
-    $scope.submitAnswer = function(index_item) {
-      $scope.clicked = index_item
-      $http.get("/quiz/" + $scope.quiz_id + "/question/" + $scope.question_nos + "/answer/" + index_item).success(function(data){
-          $scope.message = data.message
-          $scope.correct = $scope.answers.indexOf(data.answer)
-          console.log(data.answer)
-          console.log($scope.correct)
-          if($scope.message == "correct") {
-            $scope.score += 1
-          }
-          
-          $scope.shownext = true
-      })
-      console.log(index_item)
-    }
-
-
-    $scope.createQuiz = function() {
-      $http.post("create_quiz", $scope.new_quiz).success(function(data) {
-        console.log("success")
-      });
     }
     
 })
