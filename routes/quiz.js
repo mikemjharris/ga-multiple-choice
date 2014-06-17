@@ -4,6 +4,18 @@ var request = require('request');
 
 var _ = require('underscore');
 var ObjectID = require('mongoskin').ObjectID
+
+// router.all('*', function(req, res, next){
+//   if(req.user){
+//     res.locals.loggedin = true;
+//     res.locals.currentuser = req.user;
+//     next();
+//   } else {
+//      res.redirect('/');
+//   }
+  
+// });
+
 /* GET users listing. */
 router.get('/', function(req, res) {
   var db = req.db;
@@ -28,7 +40,7 @@ router.get('/:id', function(req, res) {
 router.get('/:id/play',function(req,res){
   // var db = req.db;
   // db.collection(database_collection).find().toArray(function (err, data) {
-   res.render('quiz_show', {quiz_id: req.params.id, title: "Single player play quiz"})
+   res.render('quiz_show', {quiz_id: req.params.id, title: "Single Player Quiz"})
   // })
 })
 
@@ -67,9 +79,9 @@ router.get('/:id/question/:q_id/answer/:ans_index', function(req, res) {
     var answers = data["question" + question_id].answers
     var answer = data["question" + question_id].answer
     if(answer == answers[answer_index]) {
-      message = "correct"
+      message = "Correct"
     } else {
-      message = "incorrect"
+      message = "Incorrect"
     }
 
     res.json({message: message, answer: answer});

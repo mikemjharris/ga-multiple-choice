@@ -3,21 +3,44 @@ extends layout
 block content
   div(ng-app="quizHostApp")
     div(ng-controller="MultiQuizController")
-      p(id="quiz_id" ng-hide="true")= quiz_id 
-      p link for contestants: http://localhost:3000/multi_quiz
-      div(ng-hide="question" ng-click="getNextQuestion()" class="quiz_button") Click to start
-      div(ng-show="question")
-        div : {{message}}
-        div {{ quiz_params.question_text }}
-        div >> {{ question }}
-        ul(class="answers")
-          li(ng-repeat="answer in answers" ng-class="{highlighted: $index == clicked , highlighted_correct: answer == correct} ")
-            {{ answer }}
-        
+      div(class="left-box")
+        h3 Questions
+        p(id="quiz_id" ng-hide="true")= quiz_id 
+        div(ng-hide="question")
+          p(ng-hide="question") link for contestants: http://localhost:3000/multi_quiz
+          label Points for the first correct right answer
+          input(type="number" ng-model="points.first")
+          label Points for any other right answers
+          input(type="number" ng-model="points.right")
+          label Points for wrong answer
+          input(type="number" ng-model="points.wrong")  
+        div(ng-hide="question" ng-click="getNextQuestion()" class="quiz_button") Click to start
+        div(ng-show="question")
+          div(class="question") {{ quiz_params.question_text }}
+          div(class="question") {{ question }}
+          ul(class="answers")
+            li(ng-repeat="answer in answers" ng-class="{highlighted: $index == clicked , highlighted_correct: answer == correct} ")
+              {{ answer }}
+ 
+      div(class="right-box")
+        h3 Controls  
+        div(class="highlight-message") {{message}}
         div(ng-click="getNextQuestion()" ng-show="question_nos < quiz_params.nos_questions && showNextQn" class="quiz_button") Next question
         div(ng-click="sendResults()" ng-hide="showNextQn" class="quiz_button") Send results
-      ul Players involved
-        li(ng-repeat="player in stats" ng-show="player.username") {{ player.username }} : {{player.score}} : {{player.message}}
+        h3 Players involved
+        table
+          tr
+            th Username
+            th Score 
+          tr(ng-repeat="player in stats" ng-show="player.username") 
+            td {{ player.username }}
+            td {{player.score}} 
+            //- : Message: {{player.message}}
+            
+        
+
+        //- ul
+        //-   li(ng-repeat="player in stats" ng-show="player.username") {{ player.username }}; Score: {{player.score}} : Message: {{player.message}}
         
 
 

@@ -2,11 +2,34 @@ var express = require('express');
 var router = express.Router();
 var _ = require('underscore');
 var ObjectID = require('mongoskin').ObjectID
-
 /* GET home page. */
+
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Quiz Game' });
+  if(req.user) {
+    res.locals.loggedin = true;
+    res.locals.currentuser = req.user;
+  }
+  console.log("hii")
+  res.render('index', { title: 'Quiz Game' , flash_message: req.flash('info') });
 });
+
+
+router.all('*', function(req, res, next){
+  if(req.user){
+    res.locals.loggedin = true;
+    res.locals.currentuser = req.user;
+    next();
+  } else {
+    req.flash('info', 'You need to be logged in')
+    
+    res.redirect("/" );
+  }
+
+  
+});
+
+
+
 
 router.get('/multi_quiz', function(req, res) {
   res.render('quiz_multi_show', {title: "Quiz Player"});
@@ -66,20 +89,31 @@ router.get('/generate_quiz/:id', function(req, res) {
 });
 
 
+function loggedIn(req, res, next) {
+  if (req.user) {
+    res.locals.loggedin = true;
+    res.locals.currentuser = req.user;
+    next();
+  } else {
+    // next();
+    res.redirect('/');
+  }
+}
 
-
-router.get('/create_quiz', function(req, res) {
+router.get('/create_quiz', loggedIn, function(req, res, test) {
   var db = req.db;
+  console.log(req.user)
   var collections = ["films" , "artists" ,"artworks"]
   db.collection(collections[0]).find().toArray(function (err, data) {
   // 
     var keys = _.keys(data[0])
-    res.render('create_quiz' , {keys: keys, example_data: data[0], collections: collections, title: "Multiple Choice Quiz Template Creator"});  
+    res.render('create_quiz' , {keys: keys, example_data: data[0], collections: collections, title: "Multiple Choice Quiz Template Creator" });  
   });  
 });
 
 router.get('/create_quiz/:id', function(req, res) {
   var db = req.db;
+
   var collection_name = req.params.id
   db.collection(collection_name).find().toArray(function (err, data) {
     var keys = _.keys(data[0])

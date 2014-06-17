@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  //- for user in users
+  div(class="left-box")
+    h3 Sign In Form
+    form(method="post" action="sign_in")
+      input(placeholder="email" name="email")
+      input(placeholder="password" name="password" type="password")
+      input(type="submit")

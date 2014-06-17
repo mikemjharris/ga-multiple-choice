@@ -4,6 +4,16 @@ var request = require('request');
 var fs = require('fs')
 var readline = require('readline');
 /* GET users listing. */
+
+router.all('*', function(req, res, next){
+  if(req.user){
+    res.locals.loggedin = true;
+    res.locals.currentuser = req.user;
+  };
+  next();
+});
+
+
 router.get('/', function(req, res) {
   var db = req.db;
   console.log(req)

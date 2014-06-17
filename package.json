@@ -20,12 +20,14 @@
      "mongodb": "*",
     "mongoskin": "*",
     "passport-facebook": "*",
+    "passport-local": "*",
     "mongoose": "latest",
     "request": "*",
     "node-sass": "*",
     "grunt-sass": "*",
     "grunt-contrib-watch": "*",
     "underscore": "*",
-    "ng-socket-io": "*"
+    "bcrypt" : "*",
+    "connect-flash": "*"
   }
 }

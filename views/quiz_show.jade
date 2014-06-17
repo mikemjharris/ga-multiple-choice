@@ -3,17 +3,21 @@ extends layout
 block content
   div(ng-app="quizApp")
     div(ng-controller="QuizController")
-      p(id="quiz_id" ng-hide="true")= quiz_id 
-      div(ng-hide="question" ng-click="getNextQuestion()") Click to start
-      div(ng-show="question")
-        div Question {{question_nos}} of {{quiz_params.nos_questions}} {{ quiz_params.question_text }}
-        div {{ question }}
-        
-        ul(class="answers")
-          li(ng-repeat="answer in answers" ng-click="submitAnswer($index)" ng-class="{highlighted: $index ==clicked , highlighted_correct: $index == correct} ")
-            {{ answer }}
-        
-        div(ng-click="getNextQuestion()" ng-show="question_nos < quiz_params.nos_questions && shownext" class="quiz_button") Next question
+      div(class="left-box")
+        h3 Question
+        p(id="quiz_id" ng-hide="true")= quiz_id 
+        div(ng-hide="question" ng-click="getNextQuestion()") Click to start
+        div(ng-show="question")
+          div(class="question") Question {{question_nos}} of {{quiz_params.nos_questions}} {{ quiz_params.question_text }}
+          div(class="answers") {{ question }}
+          
+          ul(class="answers")
+            li(ng-repeat="answer in answers" ng-click="submitAnswer($index)" ng-class="{highlighted: $index ==clicked , highlighted_correct: $index == correct} ")
+              {{ answer }}
+          
+          div(ng-click="getNextQuestion()" ng-show="question_nos < quiz_params.nos_questions && shownext" class="quiz_button") Next question
+      div(class="right-box")
+        h3 Stats
         a(href="/" ng-show="showFinish" class="quiz_button") Well done on finishing the quiz!
         div(class="highlight-message") Your score  {{ score }} 
         div(class="highlight-message" ng-show="message") {{message}}

@@ -18,6 +18,10 @@ nav {
   display: inline-block;
   position: absolute;
   left: 10px;
+  top: 10px;
+  a {
+    padding: 10px;
+  }
 }
 
 h2 {
@@ -93,6 +97,8 @@ li {
   width: 300px;
   margin: 0;
   padding: 0;
+  font-size: 1.2em;
+  text-align: justify;
   li {
     cursor: pointer;
     text-align: center;
@@ -120,16 +126,27 @@ li.highlighted_correct {
   padding: 5px;
   margin: 10px auto;
   background: #FA3E54;
+  color: white;
 }
+.question {
+  width: 300px;
+  margin: 0 auto;
+  text-align: justify;
+  /*border: 1px solid black;*/
+  padding: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
 
+}
 .quiz_button{
+  font-size: 1.2em;
   display: block;
   text-decoration: none;
   background: $button-color;
   color: black;
-  padding: 5px;
-  width: 200px;
-  border: 1px solid black;
+  padding: 10px;
+  width: 300px;
+  /*border: 1px solid black;*/
   margin: 5px auto;
   cursor: pointer;
   text-align: center;
@@ -159,20 +176,23 @@ table {
     &:nth-child(2n-1) {
       background: $highlight-color;
     }
-
+    th {
+      font-weight: bold;
+    }
     td, th {
       overflow: hidden;
     }
     td:first-child, th:first-child {
       text-align: right;
       padding: 5px;
-      width: 20%;
+      width: 50%;
 
       }
     td:nth-child(2), th:nth-child(2) {
       text-align: left;
-      width: 80%;
+      width: 50%;
       padding: 5px;
       }
     }
 }
+

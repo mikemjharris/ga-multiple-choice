@@ -7,7 +7,16 @@ html
   body
     header
       nav
-        a(href="/") Home
+        if currentuser
+          a(href="/") Home
+          span= currentuser.name
+          a(href="/logout") Logout
+        else
+          a(href="/sign_in") Sign in
+          a(href="/sign_up") Sign up
+          a(href="/auth/twitter") Sign in with twitter
+          a(href="/auth/facebook") Sign in with facebook
       h2= title
+      p= flash_message
     main
       block content

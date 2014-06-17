@@ -2,15 +2,14 @@ extends layout
 
 block content
   div(class="left-box")
-  
-    a(href="/quiz" class="quiz_button") Play a quiz on your own
-    br
-    a(href="/multi_quiz_host" class="quiz_button") Host a multiplayer quiz
-    br
-    a(href="/create_quiz" class="quiz_button") Create a new quiz template
-    br
-    br
-    a(href="/auth/twitter") Sign in with twitter
-    br
-    a(href="/auth/facebook") Sign in with facebook
-    br
+    if currentuser
+      a(href="/quiz" class="quiz_button") Play a quiz on your own
+    
+      a(href="/multi_quiz_host" class="quiz_button") Host a multiplayer quiz
+     
+      a(href="/create_quiz" class="quiz_button") Create a new quiz template
+    else 
+      a(href="/sign_in" class="answers") Sign in
+      a(href="/sign_up" class="quiz_button") Sign up
+      a(href="/auth/twitter" class="quiz_button") Sign in with twitter
+      a(href="/auth/facebook" class="quiz_button") Sign in with facebook

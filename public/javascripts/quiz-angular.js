@@ -41,7 +41,7 @@ app.controller('QuizController', function($scope, $http) {
         $http.get("/quiz/" + $scope.quiz_id + "/question/" + $scope.question_nos + "/answer/" + index_item).success(function(data){
             $scope.message = data.message
             $scope.correct = $scope.answers.indexOf(data.answer)
-            if($scope.message == "correct") {
+            if($scope.message == "Correct") {
               $scope.score += 1
             }      
             if($scope.question_nos >= $scope.quiz_params.nos_questions) {
@@ -115,6 +115,7 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
   $scope.socket_id = ""
   $scope.message = ""
   $scope.canAnswer = true
+  $scope.stats = {}
   
   var room = "abc123";
   
@@ -144,6 +145,7 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
     $scope.score = data[$scope.socket_id ].score
     $scope.message = data[$scope.socket_id ].message
     $scope.correct = data[$scope.socket_id ].answer
+    $scope.stats = data
     console.log($scope.correct)
   })
   
@@ -162,7 +164,6 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
     $scope.username = $scope.input_username
     var data = {}
     data[$scope.socket_id] = $scope.username
-    console.log(data)
     socket.emit('username' , data);
   }
 
