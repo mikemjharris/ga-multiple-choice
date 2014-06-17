@@ -70,13 +70,24 @@ router.get('/generate_quiz/:id', function(req, res) {
 
 router.get('/create_quiz', function(req, res) {
   var db = req.db;
-  db.collection('artists').find().toArray(function (err, data) {
+  var collections = ["films" , "artists" ,"artworks"]
+  db.collection(collections[0]).find().toArray(function (err, data) {
   // 
-  var keys = _.keys(data[0])
-  res.render('create_quiz' , {keys: keys, example_data: data[0]});  
-  });
-  
+    var keys = _.keys(data[0])
+    res.render('create_quiz' , {keys: keys, example_data: data[0], collections: collections, title: "Multiple Choice Quiz Template Creator"});  
+  });  
 });
+
+router.get('/create_quiz/:id', function(req, res) {
+  var db = req.db;
+  var collection_name = req.params.id
+  db.collection(collection_name).find().toArray(function (err, data) {
+    var keys = _.keys(data[0])
+    res.json({keys: keys, example_data: data[0]});  
+  });  
+});
+
+
 
 router.post('/create_quiz', function(req, res) {
   var db = req.db;
@@ -93,7 +104,7 @@ router.post('/create_quiz', function(req, res) {
 generate_an_answer = function (quiz, db, i, callback) {
       var question_key = quiz.quiz_params.question_key 
       var answer_key = quiz.quiz_params.answer_key
-      var database_collection = 'artists'
+      var database_collection = 'films'
     
       db.collection(database_collection).find().toArray(function (err, data) {
         var question_data = _.sample(data,1)[0]
@@ -104,10 +115,13 @@ generate_an_answer = function (quiz, db, i, callback) {
         db_query[answer_key] = {$ne: question_data[answer_key]}
         
         db.collection(database_collection).find(db_query).toArray(function (err, data_answers) {
-          var answers = _.pluck(_.sample(data_answers, 4), answer_key)
+          var all_answers = _.pluck(data_answers, answer_key)
+          var all_answers = _.uniq(all_answers)
+          console.log(all_answers)
+          var answers = _.sample(all_answers, 3)
           answers.push(question_answer)
           answers = _.shuffle(answers)
-          
+
           quiz["question" + i] = { question: question, answers: answers, answer: question_answer}
           
           if (i < quiz.quiz_params.nos_questions) {

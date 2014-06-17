@@ -15,25 +15,34 @@ io.sockets.on('connection', function(socket) {
     // socket.send(socket.id)
     socket.on('room', function(room) {
         socket.join(room);
-        console.log(io.sockets.manager.rooms)
+        // console.log(io.sockets.manager.rooms)
         socket.broadcast.emit("players" , io.sockets.manager.rooms)
         socket.emit("players" , io.sockets.manager.rooms)
         // socket.send("players" , io.sockets.manager.rooms)
         // console.log(io.sockets.manager.rooms["/abc123"])
     });
 
-    room = "abc123";
+    // room = "abc123";
+
+    socket.on('room', function(room) {
+        socket.join(room);
+    });
+
 
     socket.on('message', function(data) {
-      console.log("here")
+      // console.log("here")
       socket.broadcast.emit('message', data)
     })
 
     socket.on('answer', function(data) {
-      console.log({id: socket.id, answer: data})
+      // console.log({id: socket.id, answer: data})
       socket.broadcast.emit('answer', {id: socket.id, answer: data})
     })
 
+    socket.on('username', function(data) {
+      console.log("username triggered")
+      socket.broadcast.emit('username', data)
+    })
 
     socket.on('results', function(data) {
 
@@ -43,12 +52,14 @@ io.sockets.on('connection', function(socket) {
 
     socket.on('questions', function(data) {
       console.log("here3")
+      console.log(socket.id)
+      console.log(io.sockets.manager.rooms)
       socket.broadcast.emit('questions', data)
     })
     // io.sockets.in(room).emit('message', 'what is going on, party people?');
     
     // this message will NOT go to the client defined above
-    io.sockets.in('foobar').emit('message', 'anyone in this room yet?');
+    // io.sockets.in('foobar').emit('message', 'anyone in this room yet?');
 
 });
 

@@ -4,10 +4,10 @@ block content
   div(ng-app="quizApp")
     div(ng-controller="GenerateQuizController")
       div(class="left-box")
-        div Existing Quiz Templates
-          ul
-            li(ng-repeat="quiz in existing_quizes")
-              a(href="#" ng-click="showQuizTemplate(quiz)") {{ quiz.name }}
+        h3 Existing Quiz Templates
+        ul
+          li(ng-repeat="quiz in existing_quizes")
+            a(href="#" ng-click="showQuizTemplate(quiz)") {{ quiz.name }}
         div(ng-show="show_quiz_template")
           table(class="show_quiz_template")
             tr
@@ -33,7 +33,8 @@ block content
         else 
           a(href="/multi_quiz_host/{{ generated_quiz.id }}" ng-show="generated_quiz.msg" class="quiz_button") {{ generated_quiz.msg }}
 
-      div(class="right-box") Existing quizes for this template
+      div(class="right-box") 
+        h3 Existing quizes for this template
         ul
           li(ng-repeat="quiz in quizes") 
             if game_type == "single"

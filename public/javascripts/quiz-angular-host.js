@@ -15,10 +15,11 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
     $scope.score = {}  
     $scope.quiz_id = $('#quiz_id').html()
     $scope.players = []
-    $scope.message = {}
+    $scope.message = ""
     $scope.stats = {}
     $scope.firstAnswer = true
     $scope.gameStarted = false
+    $scope.showNextQn = true
 
     $http.get("/quiz/" + $scope.quiz_id + "/host_question/").success(function(data){
       $scope.question_data = data
@@ -62,12 +63,19 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
           $scope.stats[$scope.players[key]] = {score: 0 , message: "Please wait for the game to start", answer: 999 }
         }
         socket.emit("results" , $scope.stats)
+
       }
     })
+
+    socket.on("username" , function(data) {
+      var id = Object.keys(data)[0]
+      $scope.stats[id].username = data[id];
+    });
     
     $scope.getNextQuestion = function() {
       $scope.gameStarted = true
       $scope.shownext = false
+      $scope.showNextQn = false
       $scope.clicked = 999
       $scope.correct = 999
       $scope.question_nos += 1
@@ -82,9 +90,12 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
       }
       socket.emit("questions" , {question: $scope.question, answers: $scope.answers, quiz_params: $scope.quiz_params, message: ""});
       socket.emit("results" , $scope.stats)
+      $scope.message = "Question " + $scope.question_nos + " of "  + $scope.quiz_params.nos_questions
     }
 
     $scope.sendResults = function() {
+      $scope.showNextQn = true
+      $scope.message = "Answers sent to clients - click to go to next question"
       socket.emit("results" , $scope.stats)
     }
     

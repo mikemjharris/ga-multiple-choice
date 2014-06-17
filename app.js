@@ -18,6 +18,13 @@ var mongoUri = process.env.MONGOLAB_URI || "mongodb://localhost:27017/multiple_c
 var db = mongo.db( mongoUri  , {native_parser:true} );
 var db2 = mongoose.connect( mongoUri  , {native_parser:true} );
 
+
+// collections.each(function(err, collection) {
+    // console.log(collections);
+// });
+
+
+
 var userSchema = new mongoose.Schema ({
     name:  String,
     age:  { type: Number, min: 0, max: 100 }
@@ -159,16 +166,14 @@ app.get('/logout', function (req, res){
 
 var fs = require('fs')
 var readline = require('readline');
-// fs.createReadStream("./public/list_of_films.txt",  function (err,data) {
-//   if (err) {
-//     return console.log(err);
-//   }
-//   // db.collection('artists').insert(data, function(err, result) {
-//     console.log(data);
-//        // console.log(err)
-//   }
-//   // console.log(data);
-// );
+fs.createReadStream("./public/list_of_films.txt",  function (err,data) {
+  console.log("herrrre")
+  if (err) {
+    return console.log(err);
+  }
+    console.log(data);
+  }
+);
 
 // var rd = readline.createInterface({
 //     input: fs.createReadStream('./public/list_of_films.txt'),
@@ -177,7 +182,11 @@ var readline = require('readline');
 // });
 
 // rd.on('line', function(line) {
-//     console.log(line.split("\\t"));
+//     // console.log(line);
+//     var reg1 = /\s\b/
+//     var reg2 = /\(/
+//     console.log(line.substring(line.search(reg1) , line.search(reg2)).trim())
+
 // });
 
 

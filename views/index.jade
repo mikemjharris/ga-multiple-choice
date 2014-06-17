@@ -1,12 +1,16 @@
 extends layout
 
 block content
-  a(href="/auth/twitter") Sign in with twitter
-  br
-  a(href="/auth/facebook") Sign in with facebook
-  br
-  a(href="/quiz") Play a quiz on your own
-  br
-  a(href="/multi_quiz_host") Host a multiplayer quiz
-  br
-  a(href="/create_quiz") Create a quiz
+  div(class="left-box")
+  
+    a(href="/quiz" class="quiz_button") Play a quiz on your own
+    br
+    a(href="/multi_quiz_host" class="quiz_button") Host a multiplayer quiz
+    br
+    a(href="/create_quiz" class="quiz_button") Create a new quiz template
+    br
+    br
+    a(href="/auth/twitter") Sign in with twitter
+    br
+    a(href="/auth/facebook") Sign in with facebook
+    br

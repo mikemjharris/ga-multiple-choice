@@ -3,23 +3,22 @@ extends layout
 block content
   div(ng-app="quizHostApp")
     div(ng-controller="MultiQuizController")
-      h2 Quiz Host!
-      p(ng-click="sendResults()") Click to send
       p(id="quiz_id" ng-hide="true")= quiz_id 
-      div(ng-hide="question" ng-click="getNextQuestion()") Click to start
+      p link for contestants: http://localhost:3000/multi_quiz
+      div(ng-hide="question" ng-click="getNextQuestion()" class="quiz_button") Click to start
       div(ng-show="question")
-        div Question {{question_nos}} of {{quiz_params.nos_questions}} {{ quiz_params.question_text }}
+        div : {{message}}
+        div {{ quiz_params.question_text }}
         div >> {{ question }}
-        p {{message}}
         ul(class="answers")
           li(ng-repeat="answer in answers" ng-class="{highlighted: $index == clicked , highlighted_correct: answer == correct} ")
             {{ answer }}
         
-        div(ng-click="getNextQuestion()" ng-show="question_nos < quiz_params.nos_questions") Next question
-        div(ng-hide="question_nos < quiz_params.nos_questions && shownext") Click to share with friends
-        div Your score  {{ score }} 
-      ul
-        li(ng-repeat="player in players") {{ player }} : {{ stats[player].score}} : {{ stats[player].message}}
+        div(ng-click="getNextQuestion()" ng-show="question_nos < quiz_params.nos_questions && showNextQn" class="quiz_button") Next question
+        div(ng-click="sendResults()" ng-hide="showNextQn" class="quiz_button") Send results
+      ul Players involved
+        li(ng-repeat="player in stats" ng-show="player.username") {{ player.username }} : {{player.score}} : {{player.message}}
+        
 
 
   script(src="/socket.io/socket.io.js")

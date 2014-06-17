@@ -5,6 +5,8 @@ block content
     div(ng-controller="MultiQuizController")
       div(ng-hide="username")
         label Enter a name to be used in the quiz
+        input(placeholder="Enter room name" ng-model="room_name") 
+        input(type="submit" ng-click="connectGame()")
         input(placeholder="Enter a username" ng-model="input_username") 
         input(type="submit" ng-click="submitUsername()")
       div(ng-show="username")

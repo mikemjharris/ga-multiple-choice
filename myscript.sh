@@ -1,7 +1,6 @@
 #!/bin/bash
 # My first script
 
-echo "Hello World!"
 declare -i nos
 nos=0
 for folder in /Users/Mike/ga/working/tate/collection/artworks/*/ ; do 

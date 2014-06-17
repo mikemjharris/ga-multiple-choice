@@ -25,6 +25,7 @@
     "node-sass": "*",
     "grunt-sass": "*",
     "grunt-contrib-watch": "*",
-    "underscore": "*"
+    "underscore": "*",
+    "ng-socket-io": "*"
   }
 }
