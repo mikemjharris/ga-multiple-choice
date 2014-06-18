@@ -91,6 +91,7 @@ app.controller('GenerateQuizController', function($scope, $http) {
       $http.get("/generate_quiz/" + $scope.show_quiz_template._id).success(function(data) {
           $scope.generated_quiz.id = data.substring(1,data.length -1)
           // console.log(data)
+          $scope.quizes.push($scope.generated_quiz.id)
           $scope.generated_quiz.msg = "Quiz generated - click to play!"
       })
     }
@@ -116,6 +117,8 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
   $scope.message = ""
   $scope.canAnswer = true
   $scope.stats = {}
+  $scope.points = {}
+  
   
   var room = "abc123";
   
@@ -125,8 +128,9 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
     socket.emit('room', room);
   });
 
-  socket.on('message', function(data) {
-    console.log('Incoming message:', data);
+  socket.on('points', function(data) {
+
+    $scope.points = data
   });
   
   socket.on("questions" , function(data) {
@@ -146,7 +150,9 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
     $scope.message = data[$scope.socket_id ].message
     $scope.correct = data[$scope.socket_id ].answer
     $scope.stats = data
-    console.log($scope.correct)
+    $scope.question_nos = data[$scope.socket_id ].nos
+    console.log(data)
+
   })
   
   $scope.submitAnswer = function(index_item) {
@@ -161,7 +167,11 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
   }
 
   $scope.submitUsername = function() {
-    $scope.username = $scope.input_username
+    if($('#currentuser').html()) {
+      $scope.username = $('#currentuser').html()
+    } else {
+      $scope.username = $scope.input_username
+    }
     var data = {}
     data[$scope.socket_id] = $scope.username
     socket.emit('username' , data);

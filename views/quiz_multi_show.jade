@@ -5,14 +5,20 @@ block content
     div(ng-controller="MultiQuizController")
       div(class="left-box")
         div(ng-hide="username")
-          label Enter a name to be used in the quiz
-          input(placeholder="Enter a username" ng-model="input_username") 
-          input(type="submit" ng-click="submitUsername()")
+          if currentuser
+            div Welcome 
+              span(id="currentuser")= currentuser.name
+            div(ng-click="submitUsername()" class="quiz_button") Click to join game
+          else 
+            label Enter a name to be used in the quiz
+            form(ng-submit="submitUsername()")
+              input(placeholder="Enter a username" ng-model="input_username") 
+              input(type="submit")
         div(ng-show="username")
-          h3 Question
-          
+          h3 Question {{ question_nos }} 
           div(ng-show="question")
-            div(class="question") {{ question }}
+            div(class="question") {{ quiz_params.question_text }}
+            div(class="answers") {{ question }}
             ul(class="answers")
               li(ng-repeat="answer in answers" ng-click="submitAnswer($index)" ng-class="{highlighted: $index ==clicked , highlighted_correct: answer == correct} ")
                 {{ answer }}
@@ -22,6 +28,9 @@ block content
         h3 Messages        
         div(class="highlight-message") {{ message }}
         div(class="highlight-message") Your score  {{ score }} 
+        div Points for first correct answer: {{ points.first }}
+        div Points for any other correct answer: {{ points.right }}
+        div Points for an incorrect answer: {{ points.wrong }}
         h3 Leaderboard        
         table
           tr

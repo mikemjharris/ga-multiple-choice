@@ -1,33 +1,63 @@
 $button-color: #FF8D40;
 $button-hover-color: #BF6A30;
 $input-border: black;
-$highlight-color: #FA7080;
-$main-border: 4px solid #A64300;
+$highlight-color: #5ED0BD;
+$main-border: 0px; /*4px solid #A64300;*/
 $border-radius: 5px;
-$higlight-correct: #34D0B6;
+$highlight-correct: #34D0B6;
+/*5ED0BD  FA7080*/
 
 *{
   box-sizing: border-box;
+
 }
 
 header {
   positon: relative;
   text-align: center;
 }
+
+.right {
+  float: right;
+}
 nav {
-  display: inline-block;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  a {
-    padding: 10px;
+  background: $highlight-correct;
+  display: block;  
+  /*padding: 10px;*/
+  text-align: left;
+  div {
+    display: inline-block;
   }
+  a, span {
+    font-size: 1.2em;
+    display: inline-block;
+    width: 200px;
+    padding: 10px;
+    color: white;
+    margin: 0px;
+    text-align: center;
+    &:hover{
+      color: $highlight-correct;
+      background: white;
+      cursor: pointer;  
+    };
+  }
+  
+}
+
+a {
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.2em;
 }
 
 h2 {
   
-  display: inline-block;
+  /*display: inline-block;*/
   padding: 5px;
+  /*margin: 0 auto;*/
+  text-align: center;
   /*border: 1px solid black;  */
 }
 
@@ -116,10 +146,11 @@ li.highlighted {
 }
 
 li.highlighted_correct {
- background: $higlight-correct;
+ background: $highlight-correct;
 }
 
 .highlight-message {
+  text-align: center;
   display: block;
   font-size: 1.2em;
   width: 300px;
@@ -161,7 +192,7 @@ li.highlighted_correct {
 .left-box, .right-box{
   padding: 10px 5px;
   display: inline-block;
-  width: 30%;
+  width: 35%;
   margin: 5px;
   vertical-align: top;
   border: $main-border;
@@ -169,8 +200,10 @@ li.highlighted_correct {
 }
 
 table {
+  font: 1.2em "Lucida Grande", Helvetica, Arial, sans-serif;
   table-layout: fixed;
   width: 100%;
+  margin: 20px;
   tr{
     vertical-align: top;
     &:nth-child(2n-1) {
@@ -181,10 +214,11 @@ table {
     }
     td, th {
       overflow: hidden;
+      padding: 5px;
     }
     td:first-child, th:first-child {
       text-align: right;
-      padding: 5px;
+      
       width: 50%;
 
       }
@@ -195,4 +229,14 @@ table {
       }
     }
 }
+
+table.host {
+  td, th {
+    width: 33% !important;
+    text-align: center !important;
+  }
+  /*td:nth-child(3), th:nth-child(3) {
+    width: 55% !important;
+  }*/
+  }
 

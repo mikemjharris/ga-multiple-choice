@@ -34,6 +34,11 @@ io.sockets.on('connection', function(socket) {
       socket.broadcast.emit('message', data)
     })
 
+    socket.on('points', function(data) {
+      // console.log("here")
+      socket.broadcast.emit('points', data)
+    })
+
     socket.on('answer', function(data) {
       // console.log({id: socket.id, answer: data})
       socket.broadcast.emit('answer', {id: socket.id, answer: data})

@@ -8,10 +8,20 @@ router.get('/', function(req, res) {
   if(req.user) {
     res.locals.loggedin = true;
     res.locals.currentuser = req.user;
+    console.log(req.user)
   }
-  console.log("hii")
+  
   res.render('index', { title: 'Quiz Game' , flash_message: req.flash('info') });
 });
+
+router.get('/multi_quiz', function(req, res) {
+  if(req.user){
+    res.locals.loggedin = true;
+    res.locals.currentuser = req.user;
+  }
+  res.render('quiz_multi_show', {title: "Quiz Player"});
+});
+
 
 
 router.all('*', function(req, res, next){
@@ -21,7 +31,6 @@ router.all('*', function(req, res, next){
     next();
   } else {
     req.flash('info', 'You need to be logged in')
-    
     res.redirect("/" );
   }
 
@@ -31,9 +40,6 @@ router.all('*', function(req, res, next){
 
 
 
-router.get('/multi_quiz', function(req, res) {
-  res.render('quiz_multi_show', {title: "Quiz Player"});
-});
 
 router.get('/multi_quiz_host', function(req, res) {
   var db = req.db;

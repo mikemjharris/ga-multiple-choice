@@ -8,15 +8,21 @@ html
     header
       nav
         if currentuser
+          div(class="right")
+            a(href="users/edit/#{currentuser._id}")= currentuser.name
+            a(href="/logout") Logout
           a(href="/") Home
-          span= currentuser.name
-          a(href="/logout") Logout
+          
         else
-          a(href="/sign_in") Sign in
-          a(href="/sign_up") Sign up
-          a(href="/auth/twitter") Sign in with twitter
-          a(href="/auth/facebook") Sign in with facebook
-      h2= title
-      p= flash_message
+          div(class="right")
+            a(href="/sign_in") Sign in
+            a(href="/sign_up") Sign up
+            a(href="/auth/twitter") Sign in with twitter
+          a(href="/") Home
+          //- a(href="/auth/facebook") Sign in with facebook
+    h2= title
+    if flash_message && flash_message != ""
+      div(class="highlight-message")= flash_message
+
     main
       block content

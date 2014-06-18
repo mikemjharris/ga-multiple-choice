@@ -14,6 +14,11 @@ router.all('*', function(req, res, next){
 });
 
 
+router.get('/edit/:id' , function(req, res, next) {
+  res.render('edit_user')
+})
+
+
 router.get('/', function(req, res) {
   var db = req.db;
   console.log(req)

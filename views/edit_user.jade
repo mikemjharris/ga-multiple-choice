@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  div(class="left-box")
+    h3 Edit Your Details
+    form(method="post" action="/users/edit/#{currentuser._id}")
+      label Input new name
+      input(placeholder="name" name="name" value="#{currentuser.name}")
+      label Enter your password to confirm
+      input(placeholder="password" name="password" type="password")
+      input(type="submit")

@@ -4,7 +4,7 @@ block content
   div(ng-app="quizHostApp")
     div(ng-controller="MultiQuizController")
       div(class="left-box")
-        h3 Questions
+        h3 Question 
         p(id="quiz_id" ng-hide="true")= quiz_id 
         div(ng-hide="question")
           p(ng-hide="question") link for contestants: http://localhost:3000/multi_quiz
@@ -17,25 +17,25 @@ block content
         div(ng-hide="question" ng-click="getNextQuestion()" class="quiz_button") Click to start
         div(ng-show="question")
           div(class="question") {{ quiz_params.question_text }}
-          div(class="question") {{ question }}
+          div(class="answers") {{ question }}
           ul(class="answers")
             li(ng-repeat="answer in answers" ng-class="{highlighted: $index == clicked , highlighted_correct: answer == correct} ")
               {{ answer }}
- 
-      div(class="right-box")
-        h3 Controls  
-        div(class="highlight-message") {{message}}
+          div(class="highlight-message") {{message}}
         div(ng-click="getNextQuestion()" ng-show="question_nos < quiz_params.nos_questions && showNextQn" class="quiz_button") Next question
         div(ng-click="sendResults()" ng-hide="showNextQn" class="quiz_button") Send results
+ 
+      div(class="right-box")
         h3 Players involved
-        table
+        table(class="host")
           tr
             th Username
             th Score 
+            th Message
           tr(ng-repeat="player in stats" ng-show="player.username") 
             td {{ player.username }}
             td {{player.score}} 
-            //- : Message: {{player.message}}
+            td {{player.message}}
             
         
 

@@ -33,6 +33,7 @@ block content
 
       div(class="right-box")      
         h3(ng-model="examplequestion") Example entry from data
+        div(ng-hide="keys" class="highlight-message") Loading example data ...
         table(ng-show="keys")
           tr
             th Column Name

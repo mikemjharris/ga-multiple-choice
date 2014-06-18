@@ -11,6 +11,7 @@ var TwitterStrategy = require('passport-twitter').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
 var LocalStrategy   = require('passport-local').Strategy;
 var flash = require('connect-flash');
+var ObjectID = require('mongoskin').ObjectID
 
 //database setup
 var mongo = require('mongoskin');
@@ -327,10 +328,45 @@ app.get('/auth/facebook/callback',
 
 
 app.get('/logout', function (req, res){
+  req.flash('info', 'Logged out successfully')
   req.session.destroy(function (err) {
     res.redirect('/'); 
   });
 });
+
+app.post('/users/edit/:id' , function(req, res, next) {
+  var password = req.body.password
+  var new_name = req.body.name
+  console.log(new_name)
+  var quiz_id = req.params.id;
+  console.log(req.params)
+   console.log(req.body)
+    User.findOne({"_id": new ObjectID(quiz_id)}, function(err, user) {
+      console.log(err)
+      console.log("here")
+      user.comparePassword(password,function(err, match) {
+          console.log(err)
+          console.log(match)
+          if (err) {
+              res.redirect('/')
+          } else {
+            if(match) {
+
+              user.name = new_name
+              user.save()
+              req.user.name = new_name
+
+              res.redirect('/')
+  
+            } else {
+              res.redirect('/')
+            }
+          }
+      })
+    })
+})
+
+
 
 
 app.use('/', routes);

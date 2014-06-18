@@ -8,7 +8,7 @@ var app = angular.module('quizHostApp', ['ngRoute']).
 
 app.controller('MultiQuizController', function($scope, $http, socket) {
     $scope.question = ""
-    $scope.points = {first: 1 , right: 0, wrong: 0}
+    $scope.points = {first: 15 , right: 5, wrong: -5}
     $scope.question_nos = 0
     $scope.answers = []
     $scope.quiz_params = ""
@@ -55,6 +55,7 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
             $scope.stats[data.id].message = "You got the answer wrong"
         }
         $scope.stats[data.id].answer = $scope.question_data["question" + $scope.question_nos].answer
+        $scope.stats[data.id].nos = $scope.question_nos + 1
     });
 
     socket.on("players", function(data) {
@@ -64,7 +65,7 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
     socket.on("username" , function(data) {
       if(!$scope.gameStarted) {
         var id = Object.keys(data)[0]
-        $scope.stats[id] = {score: 0 , message: "Please wait for the game to start", answer: 999, username: data[id] }
+        $scope.stats[id] = {score: 0 , message: "Please wait for the game to start", answer: 999, username: data[id], nos: 1 }
         for(var key in $scope.stats) {
           if($scope.players[""].indexOf(key) == -1) {
               delete $scope.stats[key] 
@@ -86,15 +87,16 @@ app.controller('MultiQuizController', function($scope, $http, socket) {
       $scope.question = $scope.question_data["question" + $scope.question_nos].question
       $scope.answers = $scope.question_data["question" + $scope.question_nos].answers
       $scope.quiz_params = $scope.question_data.quiz_params
-      console.log($scope.stats)
+      // console.log($scope.stats)
       for(var key in $scope.stats) {
-        console.log(key)
+        // console.log(key)
         if($scope.stats[key]) {
           $scope.stats[key].message = "Question " + $scope.question_nos + " of "  + $scope.quiz_params.nos_questions
         }
       }
       socket.emit("questions" , {question: $scope.question, answers: $scope.answers, quiz_params: $scope.quiz_params, message: ""});
       socket.emit("results" , $scope.stats)
+      socket.emit("points" , $scope.points)
       $scope.message = "Question " + $scope.question_nos + " of "  + $scope.quiz_params.nos_questions
     }
 
