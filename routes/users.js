@@ -59,9 +59,10 @@ router.get('/art', function(req, res) {
 
 router.get('/del_null', function(req, res) {
   var db = req.db;
-  db.collections('quiz').remove({})
-  db.collections('quiz_params').remove({})
-  db.collections('films').remove({Response: "False"})
+  
+  db.collection('quiz').remove({}, function(err, reult) {});
+  db.collection('quiz_params').remove({}, function(err, reult) {});
+  db.collection('films').remove({Response: "False"} , function(err, reult) {});
 })
 
 
