@@ -10,7 +10,10 @@ html
       nav
         if currentuser
           div(class="right")
-            a(href="users/edit/#{currentuser._id}")= currentuser.name
+            if currentuser._id
+              a(href="users/edit/#{currentuser._id}")= currentuser.name
+            else 
+              a(href="#")= currentuser.name
             a(href="/logout") Logout
           a(href="/") Home
           
