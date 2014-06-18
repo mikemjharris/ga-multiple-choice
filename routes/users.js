@@ -57,6 +57,14 @@ router.get('/art', function(req, res) {
   }); 
 });
 
+router.get('/del_null', function(req, res) {
+  var db = req.db;
+  db.collections('quiz').remove({})
+  db.collections('quiz_params').remove({})
+  db.collections('films').remove({Response: "False"})
+})
+
+
 router.get('/request_test', function(req, res) {
     var movies = []
     var db = req.db;
