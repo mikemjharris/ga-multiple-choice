@@ -57,53 +57,53 @@ router.get('/art', function(req, res) {
   }); 
 });
 
-router.get('/del_null', function(req, res) {
-  var db = req.db;
+// router.get('/del_null', function(req, res) {
+//   var db = req.db;
   
-  db.collection('quiz').remove({}, function(err, reult) {});
-  db.collection('quiz_params').remove({}, function(err, reult) {});
-  db.collection('films').remove({Response: "False"} , function(err, reult) {});
-})
+//   db.collection('quiz').remove({}, function(err, reult) {});
+//   db.collection('quiz_params').remove({}, function(err, reult) {});
+//   db.collection('films').remove({Response: "False"} , function(err, reult) {});
+// })
 
 
-router.get('/request_test', function(req, res) {
-    var movies = []
-    var db = req.db;
-    var rd = readline.createInterface({
-    input: fs.createReadStream('./public/list_of_films.txt'),
-    output: process.stdout,
-    terminal: false
-    });
-    rd.on('line', function(line) {
-      var reg1 = /\s\b/
-      var reg2 = /\(/
-      var reg3 = /\)/
-      var movie = line.substring(line.search(reg1) , line.search(reg2)).trim()
-      var year = line.substring(line.search(reg2) + 1 , line.search(reg2) + 5).trim()
+// router.get('/request_test', function(req, res) {
+//     var movies = []
+//     var db = req.db;
+//     var rd = readline.createInterface({
+//     input: fs.createReadStream('./public/list_of_films.txt'),
+//     output: process.stdout,
+//     terminal: false
+//     });
+//     rd.on('line', function(line) {
+//       var reg1 = /\s\b/
+//       var reg2 = /\(/
+//       var reg3 = /\)/
+//       var movie = line.substring(line.search(reg1) , line.search(reg2)).trim()
+//       var year = line.substring(line.search(reg2) + 1 , line.search(reg2) + 5).trim()
       
-      request("http://www.omdbapi.com/?t=" + movie + "&year=" + year, function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-          // console.log(body) // Print the google web page.
-          db.collection("films").insert(JSON.parse(body), function(err, result) {
-            console.log("Inserted " + movie)
-            console.log(err)
-            console.log(result)
+//       request("http://www.omdbapi.com/?t=" + movie + "&year=" + year, function (error, response, body) {
+//         if (!error && response.statusCode == 200) {
+//           // console.log(body) // Print the google web page.
+//           db.collection("films").insert(JSON.parse(body), function(err, result) {
+//             console.log("Inserted " + movie)
+//             console.log(err)
+//             console.log(result)
 
-          });
-        }
-      });
-    });
+//           });
+//         }
+//       });
+//     });
 
 
-    // request("http://www.omdbapi.com/?t=true grit", function (error, response, body) {
-    // if (!error && response.statusCode == 200) {
-      // console.log(body) // Print the google web page.
-    // }
-    // })
+//     // request("http://www.omdbapi.com/?t=true grit", function (error, response, body) {
+//     // if (!error && response.statusCode == 200) {
+//       // console.log(body) // Print the google web page.
+//     // }
+//     // })
 
-    res.render('art', { art: "hi" });
+//     res.render('art', { art: "hi" });
 
-});
+// });
 
 
 
